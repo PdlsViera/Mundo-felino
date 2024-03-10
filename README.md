@@ -6,8 +6,6 @@ Bem-vindo ao meu modesto portfólio digital, uma janela para minha jornada como 
 
 Tecnologias Utilizadas:
 
-HTML
-CSS
-JavaScript (em aprendizado contínuo)
+HTML, CSS e JavaScript (em aprendizado contínuo)
 
-Sendo um iniciante, estou aberta a conselhos e sugestões para melhorar meu portfólio. Sinta-se à vontade para compartilhar feedback construtivo.
+Sendo uma iniciante, estou aberta a conselhos e sugestões para melhorar meu portfólio. Sinta-se à vontade para compartilhar feedback construtivo.
