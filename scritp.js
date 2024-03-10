@@ -1,0 +1,19 @@
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const imagens = document.querySelectorAll('.imagens, .imagens_rac');
+    const imagemModal = document.querySelector('.imagemModal');
+    const imagemAmpliada = document.querySelector('.imagemAmpliada');
+
+    imagens.forEach(imagem => {
+        imagem.addEventListener('click', function () {
+            imagemModal.style.display = 'flex';
+            imagemAmpliada.src = this.src;
+        });
+    });
+
+    imagemModal.addEventListener('click', function () {
+        imagemModal.style.display = 'none';
+    });
+
+})
