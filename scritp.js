@@ -17,3 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 })
+
+document.getElementById('botao').addEventListener('click', function() {
+    const fotoGato = document.getElementById('imagemAleatoria');
+    const linkApi = `https://cataas.com/cat?random${Math.random()}`;
+    
+    fotoGato.src = linkApi;
+
+});

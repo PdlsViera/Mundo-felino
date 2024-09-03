@@ -141,3 +141,39 @@ footer {
     border: 2px solid white;
     border-radius: 5px;
   }
+
+  /*Estilização botão diversão*/
+
+.containerDiversao {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #03514C;
+    color: white;
+    border: solid #03514C;
+    border-radius: 10% / 50%;
+    margin-top: 100px;
+    
+}
+
+button:hover {
+    background-color: #066b64;
+}
+
+#imagemGato {
+    margin-top: 30px;
+    
+}
+
+#imagemAleatoria {
+    max-width: 300px;
+    border-radius: 20px;
+}
