@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
 
     const imagens = document.querySelectorAll('.imagens, .imagens_rac');
@@ -16,12 +15,29 @@ document.addEventListener('DOMContentLoaded', function () {
         imagemModal.style.display = 'none';
     });
 
-})
+});
 
 document.getElementById('botao').addEventListener('click', function() {
-    const fotoGato = document.getElementById('imagemAleatoria');
-    const linkApi = `https://cataas.com/cat?random${Math.random()}`;
+    const nome = document.getElementById('nome').value.trim();
     
-    fotoGato.src = linkApi;
+    if (nome === '') {
+        alert('Por favor, insira um nome.');
+        return;
+    }
 
+    const fotoGato = document.getElementById('imagemAleatoria');
+
+    
+    function gerarNumeroDoNome(nome) {
+        let soma = 0;
+        for (let i = 0; i < nome.length; i++) {
+            soma += nome.charCodeAt(i);
+        }
+        return soma; 
+    }
+
+    const seed = gerarNumeroDoNome(nome);
+    const linkApi = `https://cataas.com/cat?uniqueSeed=${seed}`;
+
+    fotoGato.src = linkApi;
 });

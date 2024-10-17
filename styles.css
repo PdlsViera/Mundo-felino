@@ -56,6 +56,22 @@ footer {
     margin-top: auto;
 }
 
+.tenor-gif-embed {
+    width: 100px;
+    height: 100px;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: walk 10s normal infinite;
+  }
+  
+  @keyframes walk {
+    0% { left: 0; }
+    100% { left: 100%; }
+  }
+  
+
 /*Estilização pag inicial*/
 
 .container {
