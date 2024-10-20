@@ -1,27 +1,29 @@
-/*Estilização geral*/
-
+/* Estilização geral */
 body {
     font-size: 16px;
-    margin: 1rem 8rem;
+    margin: 0;
+    padding: 1rem 2rem;
     font-family: "Jacques Francois", serif;
     font-weight: 400;
     font-style: normal;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .Logo {
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 header {
     background-color: #D9D9D9; 
     text-align: center; 
     padding: 0rem;
- }
+}
 
- nav ul {
+nav ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -36,14 +38,13 @@ nav li {
     margin: 0.5rem; 
 }
 
-
 nav a {
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bold; 
     font-size: 20px; 
-    display:inline-block;
-    }
+    display: inline-block;
+}
 
 .atual {
     color: #03514C;
@@ -56,29 +57,17 @@ footer {
     margin-top: auto;
 }
 
-.tenor-gif-embed {
-    width: 100px;
-    height: 100px;
-    
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: walk 10s normal infinite;
-  }
-  
-  @keyframes walk {
-    0% { left: 0; }
-    100% { left: 100%; }
-  }
-  
+.imagens:hover, .imagens_rac:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+    transition: transform 0.3s ease-in-out;
+}
 
-/*Estilização pag inicial*/
-
+/* Estilização página inicial */
 .container {
-    display:flex;
-    align-items:center;
-    margin:0;
- }
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
 
 .pri {
     float: left;
@@ -97,9 +86,9 @@ footer {
 
 .saiba_mais {
     text-decoration: none;
-    color:#03514C;
+    color: #03514C;
     list-style: none;
-    padding: 0%;
+    padding: 0;
 }
 
 .saiba_mais a {
@@ -111,32 +100,31 @@ footer {
     text-decoration: underline; 
 }
 
-/*Estilização pag racas*/
-
+/* Estilização página raças */
 .rac {
     display: flex;
-    justify-content: space-between;
+    justify-content: column;
     align-items: center;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin: 2rem 0;
 }
 
-.pri_rac
-.sec_rac {
-    flex: 1;
+.pri_rac, .sec_rac {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
 }
 
 .imagens_rac {
     border-radius: 50%;
-    max-width: 40vh;
+    max-width: 100%;
+    max-height: 40vh;
     height: auto;
-    margin: 2rem;
+    margin: 1rem;
     box-shadow: 0 0.5rem 0.5rem #9fbeb0;
 }
 
 .racas {
     text-align: center;
-    flex-basis: 50%;
 }
 
 .imagemModal {
@@ -149,17 +137,16 @@ footer {
     background: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-  }
+}
   
 .imagemModal img {
     max-width: 80%;
     max-height: 80%;
     border: 2px solid white;
     border-radius: 5px;
-  }
+}
 
-  /*Estilização botão diversão*/
-
+/* Estilização botão diversão */
 .containerDiversao {
     display: block;
     justify-content: center;
@@ -176,8 +163,7 @@ button {
     color: white;
     border: solid #03514C;
     border-radius: 10% / 50%;
-    margin-top: 100px;
-    
+    margin-top: 100px; 
 }
 
 button:hover {
@@ -186,10 +172,43 @@ button:hover {
 
 #imagemGato {
     margin-top: 30px;
-    
 }
 
 #imagemAleatoria {
     max-width: 300px;
     border-radius: 20px;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem; /* Diminui o padding em telas menores */
+    }
+
+    nav ul {
+        flex-direction: column; /* Muda a direção do menu para coluna */
+        align-items: center; /* Alinha itens do menu ao centro */
+    }
+
+    nav a {
+        font-size: 18px; /* Diminui o tamanho da fonte do menu */
+    }
+
+    .rac {
+        margin: 1rem 0; /* Diminui as margens entre as raças */
+    }
+
+    .imagens_rac {
+        max-width: 80vw; /* Ajusta a largura das imagens */
+        margin: 1rem; /* Diminui as margens */
+    }
+
+    footer {
+        font-size: 14px; /* Diminui o tamanho da fonte do footer */
+    }
+
+    button {
+        font-size: 14px; /* Diminui o tamanho do botão */
+        padding: 8px 16px; /* Ajusta o padding do botão */
+    }
 }
