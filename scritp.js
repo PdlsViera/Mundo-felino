@@ -41,3 +41,4 @@ document.getElementById('botao').addEventListener('click', function() {
 
     fotoGato.src = linkApi;
 });
+
